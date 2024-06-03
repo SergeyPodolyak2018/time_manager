@@ -1,0 +1,34 @@
+@import 'src/styles/color';
+@import 'src/styles/shadow';
+@import 'src/styles/font_style';
+
+.footer {
+  height: 83px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  margin-top: auto;
+  padding: 0 20px;
+  border-top: 1px solid rgba(188, 196, 200, 0.25);
+
+  .buttonWrapper {
+    width: 128px;
+    height: 43px;
+    margin-left: auto;
+    &:last-child {
+      margin-left: 16px;
+    }
+    &_left {
+      width: 128px;
+      height: 43px;
+      margin-right: auto;
+    }
+  }
+
+  button {
+    @include standart;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

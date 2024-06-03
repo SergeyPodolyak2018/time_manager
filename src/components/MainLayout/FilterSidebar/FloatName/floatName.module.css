@@ -1,0 +1,16 @@
+.floatName__popup {
+  position: absolute;
+  z-index: 9;
+  font-family: "Helvetica Neue", serif;
+  font-style: normal;
+  font-weight: 500;
+  padding: 4px 5px 4px 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  line-height: 18px;
+  cursor: pointer;
+  color: #5d6472;
+  background-color: #c8c9c7;
+}
+
+/*# sourceMappingURL=floatName.module.css.map */

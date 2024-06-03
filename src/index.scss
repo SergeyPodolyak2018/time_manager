@@ -1,0 +1,66 @@
+@import './styles/normalize';
+@import './styles/main';
+
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    background: rgba(255, 255, 255, 0);
+  }
+}
+::placeholder {
+  font-style: italic;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+  user-select: none;
+}
+
+* {
+  /* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+
+  /* total width */
+  &::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0);
+    width: 16px;
+  }
+
+  /* background of the scrollbar except button or resizer */
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  /* scrollbar itself */
+  &::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #fff;
+  }
+
+  /* set button(top and bottom of the scrollbar) */
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+}

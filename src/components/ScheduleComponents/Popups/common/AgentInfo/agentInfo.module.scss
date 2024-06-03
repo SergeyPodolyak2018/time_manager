@@ -1,0 +1,41 @@
+@import '../../../../../styles/font_style';
+.agentInfo {
+  padding: 10px 20px;
+
+  &__titleH4 {
+    @include textBold14;
+    margin: 0;
+    color: #5D6472;
+  }
+
+  &__titleH5 {
+    @include textStandard12;
+    margin-right: 5px;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #5D6472;
+  }
+
+  &__text {
+    margin: 0;
+    @include textStandard12;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    //border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+  }
+
+  &__columnItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include textStandard12;
+    margin-bottom: 10px;
+    span{
+      color: #788A9C;
+    }
+  }
+
+}

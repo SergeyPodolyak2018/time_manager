@@ -1,0 +1,49 @@
+@import '../../../../../../styles/color';
+@import '../../../../../../styles/shadow';
+@import '../../../../../../styles/font_style';
+
+.datePicker {
+  cursor: pointer;
+
+  &__container {
+    width: 155px;
+    position: relative;
+    &__small {
+      width: 137px;
+    }
+    &:before {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('./assets/calendarIcon.svg');
+    }
+  }
+
+  &__input {
+    background: #FFFFFF;
+    color: #000;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+    &__small{
+      width: 137px;
+    }
+
+
+    &--disabled {
+      color: #BCC4C8;
+    }
+    &__valid{
+      border: 1px solid #fe3440;
+    }
+  }
+}

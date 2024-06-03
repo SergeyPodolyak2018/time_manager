@@ -1,0 +1,4 @@
+.apexcharts-toolbar {
+    left: calc(var(--apexcharts-toolbar-left) - 10px) !important;
+    right: unset !important;
+}

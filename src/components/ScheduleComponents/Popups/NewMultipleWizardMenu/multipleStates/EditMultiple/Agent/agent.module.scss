@@ -1,0 +1,14 @@
+.agent {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  & td {
+    padding: 10px 5px;
+    align-items: center;
+  }
+
+  &__error {
+    color: #F73232;
+  }
+}

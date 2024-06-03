@@ -1,0 +1,59 @@
+@import '../../../../../styles/color';
+@import '../../../../../styles/shadow';
+@import '../../../../../styles/font_style';
+
+.customCalendar {
+  //background-color: #5f030d;
+  box-shadow: none;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  width: 640px;
+  height: 348px;
+  padding: 20px;
+}
+
+.pageWrapper {
+  @include standart;
+  color: #5d6472;
+  height: 100%;
+
+  .agentWrapper {
+    height: 100%;
+    margin: 0 30px;
+
+    > *:first-child {
+      height: calc(100% - 34px);
+      max-height: 647px;
+      > * {
+        min-height: 100%;
+        border-radius: 5px 5px 0 0;
+      }
+    }
+
+    .agentFooterWrapper {
+      height: 32px;
+      background: #f7f8f9;
+      border: 1px solid rgba(188, 196, 200, 0.25);
+      border-radius: 0 0 4px 4px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      &__editWizard {
+        width: 798px;
+      }
+
+      .checkBoxWrap {
+        user-select: none;
+        display: flex;
+        padding: 0 15px;
+        cursor: pointer;
+        span {
+          padding: 0 8px;
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+
+

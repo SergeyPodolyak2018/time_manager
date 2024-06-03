@@ -1,0 +1,182 @@
+@import '../../../../../styles/color';
+
+.floatName {
+  &__popup {
+    position: absolute;
+    z-index: 1000;
+    font-family: 'Helvetica Neue', serif;
+    font-style: normal;
+    font-weight: 500;
+    padding: 4px 5px 4px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 18px;
+    cursor: pointer;
+    color: #5d6472;
+    background-color: #c8c9c7;
+  }
+}
+
+.filterItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 45px 6px 40px;
+  position: relative;
+  cursor: pointer;
+  max-width: 100%;
+
+  &--founded {
+    background-color: #e4f8ff;
+  }
+
+  &:hover {
+    background-color: $list-item-hover;
+    border-radius: 5px;
+  }
+
+  &__titleWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    filter: $imgBlue;
+  }
+
+  & span {
+    font-family: 'Helvetica Neue', serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #333333;
+    padding-top: 4px;
+    font-size: 14px;
+    line-height: 17px;
+    position: relative;
+    z-index: 10;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+.filterItemBU {
+  &:before {
+    background-image: url('../../assets/buIcon.svg');
+    left: 15px;
+  }
+
+  & span {
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+
+.filterItemSite {
+  padding: 6px 65px 6px 55px;
+
+  &:before {
+    left: 30px;
+    background-image: url('../../assets/siteIcon.svg');
+  }
+}
+
+.filterItemTeam {
+  padding: 6px 65px 6px 70px;
+
+  &:before {
+    left: 45px;
+    background-image: url('../../assets/teamIcon.svg');
+  }
+}
+
+.filterItemActivities {
+  padding: 6px 65px 6px 70px;
+
+  &:before {
+    left: 45px;
+    background-image: url('../../assets/activities.svg');
+  }
+}
+
+.filterItemAgent {
+  padding: 7px 65px 7px 70px;
+
+  &__titleWrapper {
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  & span {
+    font-family: 'Helvetica Neue', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5d6472;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  &__agentIcon {
+    font-size: 10px;
+    width: 26px;
+    height: 26px;
+    background-color: #cce7ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40px;
+  }
+}
+
+.loading {
+  &:before {
+    top: auto;
+
+    border-radius: 50%;
+    border: 1px solid $blue;
+    border-color: $blue transparent $blue transparent;
+
+    animation: rotate360 1s linear infinite;
+    background-image: none;
+  }
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

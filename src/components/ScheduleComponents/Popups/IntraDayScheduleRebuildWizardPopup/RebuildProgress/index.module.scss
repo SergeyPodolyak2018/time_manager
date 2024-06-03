@@ -1,0 +1,99 @@
+@import '../../../../../styles/color';
+@import '../../../../../styles/shadow';
+@import '../../../../../styles/font_style';
+
+.pageWrapper {
+  @include standart;
+  color: #5d6472;
+  //height: calc(100% - 20px);
+
+  .infoWrapper {
+    color: #5d6472;
+    @include textStandard12;
+    &_separate {
+      color: #5d6472;
+      @include textStandard12;
+      border-top: solid 1px rgba(188, 196, 200, 0.25);
+    }
+  }
+
+  .infoWrapper, .infoWrapper_separate {
+    margin-bottom: 16px;
+    .container {
+      margin: 0 30px;
+      .blockTitle {
+        @include standart;
+        font-weight: 600;
+        font-size: 14px;
+        margin: 15px 0 10px;
+        color: #5d6472;
+      }
+
+      .infoBlock {
+        margin-top: 8px;
+        font-weight: 500;
+        .label {
+          color: #5D6472;
+          margin-right: 5px;
+        }
+        .value {
+          color: #788A9C;
+        }
+        &_inline {
+          margin-top: 8px;
+          display: flex;
+          height: 14px;
+          align-items: center;
+          .statusIcon {
+            display: flex;
+            width: 14px;
+            height: 14px;
+          }
+          .notification {
+            margin: 4px 5px 0;
+            font-weight: 600;
+            font-size: 10px;
+          }
+        }
+        &_error {
+          padding-left: 14px;
+          height: fit-content;
+          overflow: hidden;
+          align-items: baseline;
+          margin-top: 4px;
+          display: flex;
+          .notification {
+            max-height: 28px;
+            margin: 0 5px;
+            font-weight: 600;
+            font-size: 10px;
+          }
+        }
+      }
+
+      .progressBlock {
+        box-sizing: border-box;
+        margin-top: 15px;
+        width: 500px;
+        height: 25px;
+        background-color: #fff;
+        border: 1px solid #1e95fe;
+        border-radius: 2px;
+        padding: 3px;
+        .progressValue {
+          width: 100px;
+          background: linear-gradient(90deg, #74BEFF 8.5%, #44A7FE 50.32%, #1E95FE 103.74%);
+          height: 100%;
+          transition: width 500ms linear;
+        }
+      }
+    }
+
+  }
+
+  .infoWrapper_separate {
+    margin-bottom: 0;
+  }
+
+}
+

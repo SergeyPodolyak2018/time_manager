@@ -1,0 +1,106 @@
+@import "src/styles/color";
+@import "src/styles/font_style";
+
+.dropdown {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__selected {
+    cursor: pointer;
+    //background: #0183F5;
+    //border-radius: 4px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: $secondary-text-color;
+    border-bottom: 1px solid $grey;
+
+    width: 100%;
+    @include textStandard14;
+
+    &:hover {
+      //background-color: #44A7FE;
+
+      &:after {
+        background-color: $grey;
+      }
+    }
+
+    &:active {
+      //background-color: #00559E;
+    }
+
+    &:after {
+      content: '';
+      width: 1px;
+      background-color: $grey;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 30px;
+    }
+
+  }
+
+  &__selectedText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //padding-right: 5px;
+    width: 75%;
+    white-space: nowrap;
+    position: relative;
+    padding: 6px 0;
+
+
+  }
+
+  &__selectedArrow {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //padding-left: 15px;
+    //border-right: 1px solid $grey;
+    &--active {
+      background-color: #1E95FE;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    top: 100%;
+    left: 5px;
+    width: 95px;
+    padding: 5px;
+    z-index: 1;
+    background: #FFFFFF;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    box-shadow: 1px 1px 10px 2px rgba(131, 162, 179, 0.25);
+    border-radius: 4px;
+
+  }
+
+  &__option {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    @include textStandard14;
+    color: #5D6472;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      background-color: $list-item-hover;
+    }
+  }
+}

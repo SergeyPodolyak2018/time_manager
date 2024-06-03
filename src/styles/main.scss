@@ -1,0 +1,21 @@
+@import 'color';
+@import 'fonts';
+@import 'z-index';
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin startCenter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

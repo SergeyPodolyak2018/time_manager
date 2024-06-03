@@ -1,0 +1,26 @@
+.edit {
+  &::placeholder {
+    color: rgba(188, 196, 200, 1);
+  }
+  padding: 8px 10px;
+  height: min-content;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  border-radius: 4px;
+  &:active,
+  &:focus {
+    outline: 1px solid rgba(188, 196, 200, 0.25);
+  }
+  &.full {
+    width: 100%;
+  }
+  &.auto {
+    width: auto;
+  }
+  &.inactive {
+    cursor: not-allowed;
+    caret-color: transparent;
+  }
+  &.disabled {
+    background: rgba(188, 196, 200, 0.25);
+  }
+}

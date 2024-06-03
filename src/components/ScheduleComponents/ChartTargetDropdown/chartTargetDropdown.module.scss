@@ -1,0 +1,184 @@
+@import '../../../styles/color';
+@import '../../../styles/font_style';
+@import '../../../styles/shadow';
+
+.disabledText {
+  color: #bcc4c8;
+}
+.defaultText {
+  color: #5d6472;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7fbfe;
+
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  border-radius: 4px;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.default {
+  @include standart;
+  color: #5d6472;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+
+  &__headerTitle {
+    overflow: hidden;
+    & span {
+      max-width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  svg {
+    margin-right: 5px;
+    path {
+      stroke: #1e95fe;
+    }
+  }
+  i {
+    @include standart;
+    color: $grey;
+  }
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 1.2px 1.2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border-color: #5d6472;
+  margin-right: 20px;
+}
+.rotate {
+  transform: rotate(-135deg);
+}
+.tzContainer {
+  position: absolute;
+  width: 100%;
+  height: 416px;
+  top: calc(100% + 5px);
+  left: 0px;
+
+  z-index: 1000;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  /* Stroke opacity */
+
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  box-shadow: 0px 17px 7px rgba(73, 112, 151, 0.01), 0px 9px 6px rgba(73, 112, 151, 0.02),
+    0px 4px 4px rgba(73, 112, 151, 0.04), 0px 1px 2px rgba(73, 112, 151, 0.04), 0px 0px 0px rgba(73, 112, 151, 0.04);
+  border-radius: 4px;
+  .tzElementContainer {
+    width: calc(100%);
+    height: 43px;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .tzElementContainerBig {
+    flex-grow: 1;
+  }
+}
+.tzElement {
+  width: calc(100% - 20px);
+  height: 33px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  @include standart;
+  color: #5d6472;
+  i {
+    @include standart;
+    color: #5d6472;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  &:hover {
+    background-color: $list-item-hover;
+    i {
+      color: $blue-3;
+    }
+  }
+}
+
+.tzElementNotHover:hover {
+  background: none;
+}
+.infoElement {
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+
+  span {
+    margin-top: 6px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #bcc4c8;
+  }
+}
+.treeElement {
+  height: calc(100% - 10px);
+  align-items: flex-start;
+  overflow-y: scroll;
+}
+.beforeEndElement {
+  border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+}
+.targetSearch {
+  border: 0.5px solid #bcc4c8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.checkBoxContainer {
+  display: flex;
+  align-items: center;
+  span {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 10px;
+    margin-right: 38px;
+  }
+}
+
+.buttonMainContainer {
+  border-top: 1px solid rgba(188, 196, 200, 0.25);
+  height: 49px;
+}
+.tzContainerDinamic {
+  height: calc(100% - 132px);
+  width: 100%;
+  overflow-y: scroll;
+}
+.buttonContainer {
+  width: 68px;
+  height: 29px;
+  margin-left: auto;
+}
+.button {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 6px 1px;
+}

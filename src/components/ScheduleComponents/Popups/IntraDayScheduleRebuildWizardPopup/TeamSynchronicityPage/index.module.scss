@@ -1,0 +1,216 @@
+@import '../../../../../styles/color';
+@import '../../../../../styles/shadow';
+@import '../../../../../styles/font_style';
+
+.pageWrapper {
+  height: 100%;
+}
+
+.tableContainer {
+  width: auto;
+  min-height: 670px;
+  max-height: 670px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 30px;
+}
+
+.tableSubWrapper {
+  width: auto;
+  position: relative;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  border-radius: 5px;
+
+  table {
+    user-select: none;
+    width: 100%;
+    @include standart;
+    thead {
+      color: #5d6472;
+      width: 500px;
+      height: 27px;
+      line-height: 21px;
+      background: $list-header;
+      border-radius: 5px 5px 0 0;
+      tr {
+        height: 36px;
+        color: #333333;
+        border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+        background-color: #f7f8f9;
+        &:first-child {
+          > *:first-child {
+            border-radius: 5px 0 0 0;
+          }
+          > *:last-child {
+            border-radius: 0 5px 0 0;
+          }
+        }
+        td {
+          box-sizing: border-box;
+          border-right: 1px solid rgba(188, 196, 200, 0.25);
+          width: 112px;
+          height: 36px;
+          color: #5d6472;
+          > * {
+            margin: 10px;
+            &.alignCentre {
+              display: flex;
+              justify-content: center;
+            }
+          }
+          &:first-child {
+            width: auto;
+            max-width: 260px;
+          }
+          &:nth-child(2) {
+            width: 160px;
+            max-width: 160px;
+          }
+          &:nth-child(3) {
+            width: 260px;
+            max-width: 260px;
+          }
+          &:nth-child(4) {
+            width: 160px;
+            max-width: 160px;
+          }
+          &:nth-child(5) {
+            width: 210px;
+            max-width: 210px;
+          }
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:hover {
+          background: $list-item-hover;
+        }
+
+        height: 36px;
+        border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+        background-color: #fff;
+        &:last-child {
+          > *:first-child {
+            border-radius: 0 0 0 5px;
+          }
+          > *:last-child {
+            border-radius: 0 0 5px 0;
+          }
+        }
+
+        td {
+          color: #5d6472;
+          box-sizing: border-box;
+          border-right: 1px solid rgba(188, 196, 200, 0.25);
+          width: 112px;
+          height: 36px;
+
+          > * {
+            box-sizing: border-box;
+            display: block;
+            margin: 0 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 28px;
+            &.alignCentre {
+              display: flex;
+              justify-content: center;
+            }
+          }
+          &:first-child {
+            width: auto;
+            max-width: 260px;
+          }
+          &:nth-child(2) {
+            width: 160px;
+            max-width: 160px;
+            div {
+              cursor: pointer;
+            }
+          }
+          &:nth-child(3) {
+            width: 260px;
+            max-width: 260px;
+          }
+          &:nth-child(4) {
+            width: 160px;
+            max-width: 160px;
+          }
+          &:nth-child(5) {
+            width: 210px;
+            max-width: 210px;
+            div {
+              cursor: pointer;
+            }
+          }
+          &:last-child {
+            border-right: none;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    .selectWrapper {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      cursor: pointer;
+      .selectLabel {
+        min-width: calc(100% - 12px);
+        width: calc(100% - 12px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 4px;
+      }
+      .selectIcon {
+        box-sizing: border-box;
+        width: 6px;
+        height: 6px;
+        position: relative;
+        transform: translateY(calc(50% + 4px)) rotate(45deg);
+        border-bottom: 1px solid;
+        border-right: 1px solid;
+      }
+    }
+    .optionsWrapper {
+      box-sizing: border-box;
+      width: 261px;
+      background-color: #fff;
+      position: absolute;
+      z-index: 1000;
+      border: 1px solid rgba(188, 196, 200, 0.25);
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+      padding: 0;
+      overflow: hidden;
+      transform: translateX(-11px);
+      @include boxShadowStandart;
+      .option {
+        padding: 2px 10px;
+        overflow: hidden;
+        &.selected {
+          color: #1e95fe;
+        }
+        .optionLabel {
+          min-width: 100%;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-right: 4px;
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: $list-item-hover;
+        }
+      }
+    }
+  }
+}

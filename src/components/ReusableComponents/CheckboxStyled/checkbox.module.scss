@@ -1,0 +1,72 @@
+@import '../../../styles/color';
+
+.checkbox {
+  display: flex;
+  width: 14px;
+  height: 14px;
+  border: #1e95fe solid 1px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &--arrow {
+    background-image: url('checked.svg');
+  }
+
+  &--arrow-disabled {
+    background-image: url('checked-disabled.svg');
+  }
+
+  &--circle {
+    &:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: #1e95fe;
+      border-radius: 5px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &--disabled {
+    border: #BCC4C8 solid 1px;
+    cursor: default;
+  }
+  &--error {
+    border: 1px solid $red;
+    cursor: default;
+  }
+
+  &--isGrayAsDefault {
+    border-color: #BCC4C8
+  }
+  &--indeterminate{
+    display: flex;
+    width: 14px;
+    height: 14px;
+    border: #1e95fe solid 1px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    &::before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: #1e95fe;
+      border-radius: 5px;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

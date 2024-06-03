@@ -1,0 +1,142 @@
+@import '../../../styles/color';
+@import '../../../styles/font_style';
+@import '../../../styles/shadow';
+.container {
+  width: 171px;
+  height: 200px;
+  position: absolute;
+  right: 54px;
+  bottom: -210px;
+
+  background: $white;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  @include boxShadowStandart;
+  border-radius: 5px;
+  z-index: 1000;
+  @include standart;
+  color: #5d6472;
+}
+.delimeter {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(188, 196, 200, 0.25);
+  &Abs {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(188, 196, 200, 0.25);
+  }
+}
+
+.selectContainer {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 10px);
+  margin: 6px auto;
+  height: 28px;
+
+  cursor: pointer;
+  border-radius: 5px;
+  svg {
+    margin-left: 10px;
+  }
+  &:hover {
+    background: #e4f8ff;
+    color: #0287fe;
+    svg path {
+      stroke: #0287fe;
+    }
+  }
+}
+.rangeHolder {
+  width: 125px;
+  margin: 6px auto;
+  height: 28px;
+  &Small{
+    width: 165px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+  }
+}
+.subcontainer {
+  position: absolute;
+  left: -110px;
+  top: 0;
+  width: 105px;
+  height: 80px;
+  background: $white;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  @include boxShadowStandart;
+  border-radius: 5px;
+  visibility: hidden;
+  :after{
+    content: '';
+    position: absolute;
+    right: -30px;
+    width: 30px;
+    height: 100%;
+    top: 0;
+    background-color: transparent;
+  }
+  &Bigger{
+    width: 200px;
+    height: 190px;
+    left: -200px;
+  }
+  &Medium{
+    width: 115px;
+    left: -115px;
+  }
+}
+.selectContainerParent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 10px);
+  margin: 6px auto;
+  height: 28px;
+  border-radius: 5px;
+  cursor: default;
+  &:hover {
+    .subcontainer {
+      visibility: visible;
+    }
+    background: rgba(188, 196, 200, 0.25);
+  }
+  svg {
+    margin-left: 10px;
+  }
+}
+.buttonName {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  margin-left: 10px;
+}
+.buttonNameCheckbox{
+  margin-right: 9px;
+}
+.active {
+  svg path {
+    stroke: #0287fe;
+  }
+}
+.activeFill {
+  svg path {
+    fill: #0287fe;
+  }
+}
+
+.arrowButton {
+  border: solid #5d6472;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: auto;
+  margin-right: 9.5px;
+}

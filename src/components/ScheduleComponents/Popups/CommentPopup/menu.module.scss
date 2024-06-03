@@ -1,0 +1,125 @@
+@import '../../../../styles/color';
+@import '../../../../styles/shadow';
+@import '../../../../styles/font_style';
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(200, 208, 223, 0.4);
+  backdrop-filter: blur(1px);
+}
+.formWrapper {
+  width: 558px;
+  height: 409px;
+  background: #fafdff;
+  @include borderStandart;
+  border-radius: 5px;
+  @include boxShadowStandart;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 54px;
+  background: $white;
+  border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 20px;
+    font-family: Helvetica Neue, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+    color: #5d6472;
+  }
+  svg {
+    margin-left: auto;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+.body {
+  width: 560px;
+  height: 283px;
+}
+.subHeader {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  color: #5d6472;
+  @include standart;
+  span {
+    margin-left: 5px;
+  }
+}
+
+.memoWrap {
+  position: relative;
+  width: 560px;
+  height: 237px;
+  border-top: 1px solid rgba(188, 196, 200, 0.25);
+  .memoContainer {
+    position: absolute;
+    width: 496px;
+    height: 208px;
+    margin-left: 30px;
+    background-color: $white;
+    border-radius: 5px;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    &:focus-within {
+      border: 1px solid #1e95fe;
+    }
+  }
+  textarea {
+    width: 480px;
+    height: 194px;
+    margin-left: 10px;
+    margin-top: 6px;
+    font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+    font-size: 14px;
+    line-height: 16.7px;
+    outline: none;
+    border: none;
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 85px;
+  border-radius: 0px 0px 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  margin-top: auto;
+  border-top: 1px solid rgba(188, 196, 200, 0.25);
+  button {
+    @include standart;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+.buttonWrap1 {
+  width: 108px;
+  height: 44px;
+}
+.buttonWrap3 {
+  width: 108px;
+  height: 44px;
+  margin-left: 24px;
+}

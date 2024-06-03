@@ -1,0 +1,27 @@
+@import 'src/styles/color';
+@import 'src/styles/shadow';
+@import 'src/styles/font_style';
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(200, 208, 223, 0.4);
+  backdrop-filter: blur(1px);
+}
+
+.formWrapper {
+  @include borderStandart;
+  @include boxShadowStandart;
+  background: $form-bg-color;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

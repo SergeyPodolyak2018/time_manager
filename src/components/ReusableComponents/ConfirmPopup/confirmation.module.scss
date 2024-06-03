@@ -1,0 +1,92 @@
+@import '../../../styles/color';
+@import '../../../styles/shadow';
+@import '../../../styles/font_style';
+
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(200, 208, 223, 0.4);
+  backdrop-filter: blur(1px);
+}
+.formWrapper {
+  width: 400px;
+  background: #fafdff;
+  @include borderStandart;
+  border-radius: 5px;
+  @include boxShadowStandart;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 54px;
+  background: $white;
+  border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 20px;
+    font-family: Helvetica Neue, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+    color: #5d6472;
+  }
+  svg {
+    margin-left: auto;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+
+.body {
+  width: 100%;
+  height: 115px;
+  border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include standart;
+  color: #5d6472;
+  span {
+    padding-top: 22px;
+    display: flex;
+    text-align: center;
+  }
+  .text1 {
+    font-weight: bold;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 83px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  button {
+    @include standart;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+.buttonWrap1 {
+  width: 170px;
+  height: 43px;
+}
+.buttonWrap2 {
+  width: 170px;
+  height: 43px;
+  margin-left: 20px;
+}

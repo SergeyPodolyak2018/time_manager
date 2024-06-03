@@ -1,0 +1,50 @@
+@import '../../../styles/color';
+@import '../../../styles/font_style';
+@import '../../../styles/shadow';
+.container {
+  width: 171px;
+  height: fit-content;
+  position: absolute;
+  right: 100px;
+  top: 115%;
+
+  background: $white;
+  @include boxShadowStandart;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.selectContainer {
+  &:first-child {
+    border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px 4px 0px 0px;
+  }
+  &:last-child {
+    border-top: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 0px 0px 4px 4px;
+  }
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 38px;
+  @include standart;
+  color: #5d6472;
+  cursor: pointer;
+  svg {
+    margin-left: 16px;
+  }
+  &:hover {
+    background: #e4f8ff;
+    color: #0287fe;
+    svg path {
+      stroke: #0287fe;
+    }
+  }
+}
+.buttonName {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  margin-left: 10px;
+}

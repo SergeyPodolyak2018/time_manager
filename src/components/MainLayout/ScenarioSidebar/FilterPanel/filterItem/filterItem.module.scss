@@ -1,0 +1,145 @@
+@import '../../../../../styles/color';
+
+
+.floatName {
+  &__popup {
+    position: absolute;
+    z-index: 1000;
+    font-family: 'Helvetica Neue', serif;
+    font-style: normal;
+    font-weight: 500;
+    padding: 4px 5px 4px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 18px;
+    cursor: pointer;
+    color: #5d6472;
+    background-color: #c8c9c7;
+  }
+}
+
+.filterItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px 6px 40px;
+  position: relative;
+  cursor: pointer;
+  max-width: 100%;
+
+  &--founded {
+    background-color: #e4f8ff;
+  }
+
+  &:hover {
+    background-color: $list-item-hover;
+    border-radius: 5px;
+  }
+
+  &__titleWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    filter: $imgBlue;
+  }
+
+  & span {
+    font-family: 'Helvetica Neue', serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #333333;
+    font-size: 14px;
+    line-height: 17px;
+    position: relative;
+    z-index: 10;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+
+.filterItemMyScenarios {
+  &:before {
+    background-image: url('../../assets/myScenariosIcon.svg');
+    left: 15px;
+  }
+
+  & span {
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+
+
+.filterItemSharedScenarios {
+  &:before {
+    background-image: url('../../assets/sharedScenariosIcon.svg');
+    left: 15px;
+  }
+
+  & span {
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+
+.filterItemOtherScenarios {
+  &:before {
+    background-image: url('../../assets/otherScenariosIcon.svg');
+    left: 15px;
+  }
+
+  & span {
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+
+.loading{
+  &:before {
+    top: auto;
+
+    border-radius: 50%;
+    border: 1px solid $blue;
+    border-color: $blue transparent $blue transparent;
+    animation: loader 1.2s linear infinite;
+
+    animation: rotate360 1s linear infinite;
+    background-image: none;
+
+  }
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

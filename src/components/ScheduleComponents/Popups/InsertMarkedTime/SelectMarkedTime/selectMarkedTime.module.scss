@@ -1,0 +1,142 @@
+@import '../../../../../styles/components.mixins';
+
+// .tdMark {
+//   // margin-left: 30%;
+// }
+// .selectMarkedTime {
+//   padding: 10px 20px;
+//   // min-height: 280px;
+
+//   &__content {
+//     border: 1px solid rgba(188, 196, 200, 0.25);
+//     border-radius: 4px;
+//   }
+// thead{
+// }
+//   &__tr {
+//     height: 37px;
+//     cursor: pointer;
+//     td{
+// background: white;
+//       // background: #E0F0FF;
+//     }
+//     & td {
+//       width: 100%;
+//       // margin: 0;
+//       border-right: 1px solid rgba(188, 196, 200, 0.25);
+//       display: flex;
+//       justify-content: flex-start;
+//       white-space: nowrap;
+//       overflow: hidden;
+//       align-items: center;
+//       padding: 10px 10px;
+//       @include textStandard14;
+
+//       &:last-child {
+//         border-right: none;
+//       }
+//     }
+//     &__selected {
+//       padding: 5px;
+//       td:first-child{
+//         // margin: 5px 0px 5px 5px;
+//         // max-height: calc(100% - 10px);
+//         border-radius: 5px 0px 0px 5px;
+//         padding: 0;
+//         padding-left: 5px;
+//       }
+//       td:last-child{
+//         // margin: 5px 5px 5px 0px;
+//         border-radius: 0px 5px 5px 0px;
+//         padding: 0;
+//         padding-right: 5px;
+//       }
+//       td{
+//       background-color: $list-item-selected;
+//       // margin: 5px 0px 5px 0px;
+//       // margin-top: 5px;
+//       // margin-bottom: 5px;
+//       // padding: 0;
+
+//       }
+//     }
+
+//     &:hover {
+//       td{
+
+//         background: $list-item-hover;
+//       }
+//       background: $list-item-hover;
+//     }
+//   }
+
+//   &__table {
+//     width: 100%;
+
+//     & tbody {
+//       // display: block;
+//       // max-height: 350px;
+//       // min-height: 230px;
+//       // overflow-y: scroll;
+//       &::-webkit-scrollbar {
+//         width: 0;
+//       }
+//     }
+//     tbody{
+//       tr{
+//         &:hover{
+//           background: $list-item-hover;
+//         }
+//       }
+//     }
+//     & th {
+//       @include textStandard14;
+//       margin: 0;
+//     }
+
+//     & tr {
+//       // display: grid;
+//       // grid-template-columns: 200px repeat(3, 105px);
+//       border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+//     }
+
+//     & th {
+//       border-right: 1px solid rgba(188, 196, 200, 0.25);
+//       // display: flex;
+//       justify-content: flex-start;
+//       align-items: center;
+//       padding: 5px 10px;
+//       text-align: left;
+
+//       &:last-child {
+//         border-right: none;
+//       }
+//     }
+
+//     border-radius: 4px;
+//     overflow: hidden;
+//   }
+
+//   &__titleWrapper {
+//     background: $list-header;
+//     border-radius: 4px 4px 0px 0px;
+//     width: 100%;
+//   }
+
+// }
+.selectMarkedTime__content {
+  padding: 16px 24px;
+  min-height: 280px;
+
+  &__content {
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px;
+  }
+
+  .tableWrapper {
+    @include tableWrapper(235px);
+    tbody tr {
+      cursor: pointer;
+    }
+  }
+}

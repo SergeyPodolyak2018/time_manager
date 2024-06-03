@@ -1,0 +1,91 @@
+@import '../../../../styles/color';
+@import '../../../../styles/font_style';
+.wrapper {
+  position: relative;
+  width: 260px;
+  height: calc(100% - 11px);
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 35px;
+  justify-content: center;
+  border-left: 1px solid rgba(200, 201, 199, 0.2);
+  border-right: 1px solid rgba(200, 201, 199, 0.2);
+  cursor: pointer;
+}
+.face {
+  width: 50px;
+  height: 48.67px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.name {
+  width: 110px;
+  height: fit-content;
+
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: $black;
+  margin-left: 20px;
+}
+.dropdown {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 187px;
+  height: 40px;
+
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  box-shadow: 0px 17px 7px rgba(73, 112, 151, 0.01), 0px 9px 6px rgba(73, 112, 151, 0.02),
+    0px 4px 4px rgba(73, 112, 151, 0.04), 0px 1px 2px rgba(73, 112, 151, 0.04), 0px 0px 0px rgba(73, 112, 151, 0.04);
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.navButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 177px;
+  height: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  svg {
+    margin-left: 12px;
+  }
+  .buttonName {
+    margin-left: 12.25px;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #5d6472;
+  }
+}
+.versionHolder {
+  @include textStandard10;
+  color: $version;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 28px;
+  border-top: 1px solid rgba(188, 196, 200, 0.25);
+  cursor: default;
+}

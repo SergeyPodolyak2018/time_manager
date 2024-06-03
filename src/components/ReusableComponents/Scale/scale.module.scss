@@ -1,0 +1,49 @@
+@import '../../../styles/color';
+.container {
+  width: 100%;
+  height: 68px;
+  background: $grey-header-chedule;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: $grey-header-chedule-border;
+  position: relative;
+  .linesContainer {
+    position: absolute;
+    width: calc(100% - 311px - 30px);
+    right: 26px;
+    top: 0;
+    z-index: 0;
+    height: 100%;
+  }
+  .timeContainerLines {
+    width: 1px;
+    background-color: $grey-3;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    z-index: 900;
+  }
+}
+.scaleContainer {
+  position: absolute;
+  right: 26px;
+  width: calc(100% - 311px - 30px);
+  height: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .timeContainerNumbers {
+    text-align: center;
+    z-index: 900;
+    position: absolute;
+    top: 0px;
+    width: 22px;
+    height: 30px;
+    margin: 0;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    transform: translateX(-50%);
+    color: $black;
+  }
+}

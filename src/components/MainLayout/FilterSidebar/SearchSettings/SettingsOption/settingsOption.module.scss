@@ -1,0 +1,129 @@
+@import '../../../../../styles/color';
+@import '../../../../../styles/fonts';
+
+.settingsOptionWrapper {
+  padding: 5px;
+
+  &:hover {
+    .settingsOption {
+      background: $list-item-hover;
+      border-radius: 5px;
+    }
+  }
+}
+
+.settingsOption {
+  font-family: $helvetica, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5d6472;
+  padding: 5px 10px 5px 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+  }
+
+  &__text {
+    overflow: hidden;
+    padding-right: 10px;
+  }
+
+  &--buIcon {
+    &:before {
+      background-image: url('../../assets/buIcon.svg');
+    }
+  }
+
+  &--siteIcon {
+    &:before {
+      background-image: url('../../assets/siteIcon.svg');
+    }
+  }
+
+  &--teamIcon {
+    &:before {
+      background-image: url('../../assets/teamIcon.svg');
+    }
+  }
+  &--agentNameIcon {
+    &:before {
+      background-image: url('../../assets/agentNameIcon.svg');
+    }
+  }
+
+  &--agentIdIcon {
+    &:before {
+      background-image: url('../../assets/searchAgentIdIcon.svg');
+    }
+  }
+
+  &--agentIdConventionalIcon {
+    &:before {
+      background-image: url('../../assets/agentIdConventionalIcon.svg');
+    }
+  }
+
+  &--activityIcon {
+    &:before {
+      background-image: url('../../assets/activities.svg');
+    }
+  }
+
+  &--buIconActive {
+    &:before {
+      background-image: url('../../assets/buIconBlue.svg');
+    }
+  }
+
+  &--siteIconActive {
+    &:before {
+      background-image: url('../../assets/siteIconBlue.svg');
+    }
+  }
+
+  &--teamIconActive {
+    &:before {
+      background-image: url('../../assets/teamIconBlue.svg');
+    }
+  }
+  &--agentNameIconActive {
+    &:before {
+      background-image: url('../../assets/agentNameBlue.svg');
+    }
+  }
+
+  &--agentIdIconActive {
+    &:before {
+      background-image: url('../../assets/searchAgentIdIconBlue.svg');
+    }
+  }
+
+  &--activityIconActive {
+    &:before {
+      background-image: url('../../assets/activitiesBlue.svg');
+    }
+  }
+
+  &--agentIdConventionalIconActive {
+    &:before {
+      background-image: url('../../assets/agentIdConventionalIconBlue.svg');
+    }
+  }
+}

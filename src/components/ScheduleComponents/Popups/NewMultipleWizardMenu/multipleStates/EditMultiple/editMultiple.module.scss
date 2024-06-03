@@ -1,0 +1,167 @@
+@import '../../../../../../styles/font_style';
+@import '../../../../../../styles/color';
+
+.editWizard {
+
+
+  &__table {
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px;
+    border-collapse: separate;
+
+    & tr {
+      @include textStandard14;
+      display: grid;
+      gap: 0;
+      grid-template-columns: 27px 130px 104px repeat(5, 85px) 100px;
+      border-right: 1px solid rgba(188, 196, 200, 0.25);
+      border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+    }
+
+    & th {
+      border-right: 1px solid rgba(188, 196, 200, 0.25);
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+
+    & td {
+      border-right: 1px solid rgba(188, 196, 200, 0.25);
+      display: flex;
+      justify-content: center;
+      &:last-child {
+        border-right: none;
+      }
+      &:nth-child(2) {
+        justify-content: flex-start;
+      }
+      &:nth-child(3) {
+        justify-content: flex-start;
+      }
+    }
+
+    tbody{
+      tr{
+        &:hover{
+          background: $list-item-hover;
+        }
+      }
+    }
+  }
+
+  &__tableRowHeader {
+    border-radius: 4px 4px 0px 0px;
+    background: $list-header;
+
+
+    & th {
+      @include textStandard14;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 5px;
+    }
+  }
+
+
+  &__body {
+    position: relative;
+    height: 241px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__subTitle {
+    @include textStandard14;
+    margin-bottom: 5px;
+    margin-left: 30px;
+  }
+
+  &__timeContainer {
+    display: grid;
+    grid-template-columns: 115px 65px 80px 80px;
+    gap: 10px;
+    margin-bottom: 5px;
+    @include textStandard12;
+
+  }
+
+  &__timeContainerBigger {
+    display: grid;
+    grid-template-columns: 115px 90px 80px 80px;
+    gap: 10px;
+    margin-bottom: 5px;
+    @include textStandard12;
+
+  }
+
+  &__textContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__optionsColumns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border:  1px solid rgba(188, 196, 200, 0.25);
+  }
+
+  &__optionsColumns2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px 30px;
+  }
+
+  &__optionsColumn {
+    padding: 15px 30px;
+    width: 100%;
+    display: grid;
+  }
+
+  &__optionsColumn2 {
+    //width: 20%;
+  }
+
+  &__timePicker {
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px;
+    width: 60px;
+    height: 38px;
+    margin-left: 5px;
+  }
+
+  &__timePickerBigger {
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px;
+    width: 86px;
+    height: 38px;
+    margin-left: 5px;
+  }
+
+  &__radio {
+    margin-right: 5px;
+  }
+}

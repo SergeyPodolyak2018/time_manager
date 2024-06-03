@@ -1,0 +1,108 @@
+@import '../../../../../styles/color';
+@import '../../../../../styles/shadow';
+@import '../../../../../styles/font_style';
+
+.pageWrapper {
+  height: 100%;
+}
+
+.containerMessage {
+  text-wrap: normal !important;
+}
+
+.tableSubWrapper {
+  width: auto;
+  max-height: 670px;
+  position: relative;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  border-radius: 5px;
+  margin: 16px 30px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  table {
+    user-select: none;
+    width: 100%;
+    @include standart;
+    thead {
+      position: sticky;
+      top: 0;
+      color: #5d6472;
+      width: 500px;
+      height: 27px;
+      line-height: 21px;
+      border-radius: 5px 5px 0 0;
+      tr {
+        height: 36px;
+        color: #333333;
+        border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+        background-color: #99CDFF;
+        td {
+          box-sizing: border-box;
+          border-right: 1px solid rgba(188, 196, 200, 0.25);
+          width: 112px;
+          height: 36px;
+          color: #5d6472;
+          &:first-child {
+            width: 64px;
+          }
+          &:last-child {
+            width: 640px;
+            max-width: 640px;
+            border-right: none;
+          }
+          > * {
+            width: auto;
+            margin: 10px;
+            &.alignCentre {
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        height: 36px;
+        border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+        background-color: #fff;
+        td {
+          color: #5d6472;
+          box-sizing: border-box;
+          border-right: 1px solid rgba(188, 196, 200, 0.25);
+          width: 112px;
+          height: 36px;
+          &.indexCell {
+            background-color: #f7f8f9;
+          }
+          &:first-child {
+            width: 64px;
+          }
+          &:last-child {
+            width: 640px;
+            max-width: 640px;
+            border-right: none;
+          }
+          > * {
+            width: auto;
+            height: auto;
+            box-sizing: border-box;
+            display: block;
+            margin: 0 10px;
+            overflow: hidden;
+            line-height: 28px;
+            &.alignCentre {
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

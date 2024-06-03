@@ -1,0 +1,62 @@
+@import '../../../../styles/font_style';
+
+.insertWorkSet {
+
+  &__popup {
+    position: fixed;
+    top: 50%;
+    width: 560px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px;
+    min-height: 580px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 54px 455px 83px;
+    gap: 10px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  &__titleH3 {
+    @include textStandard20;
+    color: #5D6472;
+    margin: 0;
+  }
+
+  &__footer {
+    padding: 10px 20px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:nth-child(2) {
+      width: 55%;
+      justify-content: flex-end;
+    }
+  }
+
+  &__btn {
+    max-width: 130px;
+    padding: 12px 10px;
+    @include textStandard16;
+
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
+
+  &__content {
+    background: #F9FCFF;
+  }
+}

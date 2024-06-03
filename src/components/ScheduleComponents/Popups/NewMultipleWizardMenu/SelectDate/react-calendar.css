@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+.rmdp-top-class{
+  width: 100%;
+  height: 100%;
+}
+.rmdp-calendar{
+  width: 100%;
+  height: 100%;
+}
+.rmdp-day-picker{
+  justify-content: space-between;
+}
+.rmdp-day-picker * {
+  user-select: none;
+}
+.rmdp-week{
+  width: 300px;
+}
+.rmdp-day, .rmdp-week-day{
+  width: 43px !important;
+  height: 30px !important;
+  margin-top: 10px;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5D6472 !important;
+}
+.rmdp-range{
+  color:#5D6472 !important;
+  background-color: #DAEDFF !important;
+  box-shadow:none !important;
+}
+
+.rmdp-range-hover.start, .rmdp-range.start {
+  border-bottom-left-radius: 38% !important;
+  border-top-left-radius: 38%!important;
+  box-shadow:none;
+  background: rgb(218,237,255);
+  background: linear-gradient(270deg, rgba(218,237,255,1) 47%, rgba(255,255,255,1) 51%);
+}
+.rmdp-range-hover.end, .rmdp-range.end {
+  border-bottom-right-radius: 38% !important;
+  border-top-right-radius: 38%!important;
+  box-shadow:none;
+  background: rgb(218,237,255);
+  background: linear-gradient(90deg, rgba(218,237,255,1) 47%, rgba(255,255,255,1) 51%);
+}
+
+.rmdp-day.rmdp-range.start.end{
+  background: none;
+}
+.rmdp-day.rmdp-range.start span:not(.highlight){
+  background-color: #1E95FE;
+  box-shadow: 0 0 3px #8798ad;
+  color: #fff;
+}
+.rmdp-day.rmdp-range.end span:not(.highlight){
+  background-color: #1E95FE;
+  box-shadow: 0 0 3px #8798ad;
+  color: #fff;
+}
+.rmdp-day.rmdp-selected span:not(.highlight) {
+  background-color: #1E95FE !important;
+  box-shadow: 0 0 3px #8798ad;
+  color: #fff;
+}
+.rmdp-day .sd{
+  width: 30px;
+  height: 30px;
+  bottom: 0px;
+  left: 7px;
+  right: 0px;
+  top: 0px;
+}
+.rmdp-week-day{
+  font-family: Helvetica Neue !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+  color: #788A9C !important;
+}
+.rmdp-header-values{
+  font-family: Helvetica Neue !important;
+  font-style: normal!important;
+  font-weight: 600!important;
+  font-size: 16px!important;
+  line-height: 20px!important;
+  color: #5D6472!important;
+}
+.rmdp-header{
+  position: relative;
+}
+.rmdp-header:after{
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 0px;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  top:100%;
+  left: 0;
+}
+.rmdp-header:before{
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 0px;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  top:100%;
+  right: 0;
+}
+.rmdp-arrow {
+  border-top: 0px solid #5D6472 !important;
+  border-bottom: 2px solid #5D6472 !important;
+  border-left: 0px solid #5D6472 !important;
+  border-right: 2px solid #5D6472 !important;
+}
+.rmdp-arrow-container:hover {
+  background-color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.react-datepicker__month-container * {
+  user-select: none;
+}

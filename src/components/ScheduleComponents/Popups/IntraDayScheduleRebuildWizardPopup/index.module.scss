@@ -1,0 +1,144 @@
+@import '../../../../styles/color';
+@import '../../../../styles/shadow';
+@import '../../../../styles/font_style';
+@import '../../../../styles/z-index';
+.showAll {
+  position: sticky;
+  bottom: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $modals;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(200, 208, 223, 0.4);
+  backdrop-filter: blur(1px);
+}
+
+.formWrapper {
+  width: 1112px;
+  height: 876px;
+  background: #fafdff;
+  @include borderStandart;
+  border-radius: 5px;
+  @include boxShadowStandart;
+  display: flex;
+  flex-direction: column;
+}
+
+.formWrapper_progressPage {
+  width: 562px;
+  height: 550px;
+  background: #fafdff;
+  @include borderStandart;
+  border-radius: 5px;
+  @include boxShadowStandart;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress {
+  position: absolute;
+  display: flex;
+  width: 1112px;
+  height: calc(876px - 54px - 83px);
+  justify-content: center;
+  align-items: center;
+  transform: translate(0, 120px);
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 54px;
+  background: $white;
+  border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 20px;
+    font-family: Helvetica Neue, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+    color: #5d6472;
+  }
+  svg {
+    margin-left: auto;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+
+.subHeader {
+  margin: 15px 0 10px;
+  color: #5d6472;
+  @include standart;
+  span {
+    font-weight: 600;
+    margin: 0 30px;
+  }
+}
+
+.body {
+  width: 100%;
+  height: calc(100% - 54px - 83px);
+  margin-bottom: 15px;
+  .bodyWrapper {
+    margin: 0;
+    height: 100%;
+  }
+}
+
+.footer {
+  height: 83px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $white;
+  margin: auto 0;
+  padding: 0 20px;
+  border-top: 1px solid rgba(188, 196, 200, 0.25);
+  .buttonWrap {
+    width: 128px;
+    height: 43px;
+    margin: 0 8px;
+    &_leftAlign {
+      width: 128px;
+      height: 43px;
+      margin: 0 auto 0 8px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  button {
+    @include standart;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .wrapCenterAlign {
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+.spinnerWrapper {
+  position: absolute;
+  width: 1112px;
+  height: 822px;
+}

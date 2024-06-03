@@ -1,0 +1,110 @@
+@import '../../../../../styles/font_style';
+@import '../../../../../styles/z-index';
+
+.insertPopupLayout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $modals;
+  width: 100%;
+  background: rgba(200, 208, 223, 0.4);
+  backdrop-filter: blur(1px);
+
+  &__popup {
+    position: fixed;
+    top: 50%;
+    width: 560px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px;
+    min-height: 659px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  &__titleH3 {
+    @include textStandard20;
+    color: #5d6472;
+    margin: 0;
+  }
+
+  &__footer {
+    padding: 10px 20px;
+    max-height: 76px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 44px;
+
+    &:nth-child(2) {
+      width: 108px;
+      margin-left: 16px;
+      justify-content: flex-start;
+    }
+  }
+  &_separatedBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 44px;
+
+    &:nth-child(2) {
+      width: 55%;
+      justify-content: flex-end;
+    }
+  }
+
+  &__btn {
+    max-width: 108px;
+    max-height: 44px;
+    padding: 12px 10px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    font-size: 16px;
+    line-height: 19px;
+
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
+
+  &__previousBtn {
+    max-width: 133px;
+    max-height: 44px;
+    padding: 12px 10px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__content {
+    background: #f9fcff;
+    height: 100%;
+
+    border-top: 1px solid rgba(188, 196, 200, 0.25);
+    border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+  }
+}

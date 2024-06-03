@@ -1,0 +1,92 @@
+.button {
+  position: relative;
+  display: flex;
+  padding: 11px 31px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 4px;
+  border: 1px solid var(--Placeholder, #bcc4c8);
+  background: #fff;
+  color: var(--Secondary-text-color, #5d6472);
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  &.hoverable {
+    &:hover {
+      background: var(--Hover, #f1f5f9);
+    }
+  }
+  &.shadow {
+    box-shadow: 0px 0px 0px 0px rgba(229, 235, 240, 0.43), 0px 1px 2px 0px rgba(229, 235, 240, 0.42),
+      0px 4px 4px 0px rgba(229, 235, 240, 0.36), 0px 8px 5px 0px rgba(229, 235, 240, 0.21),
+      0px 14px 6px 0px rgba(229, 235, 240, 0.06), 0px 22px 6px 0px rgba(229, 235, 240, 0.01);
+  }
+  &.withIcon {
+  }
+  &.danger {
+    color: white;
+    background: var(--Red, #eb5757);
+    border-color: var(--Red, #eb5757);
+    &.hoverable:hover {
+      background: var(--Red, #e67979);
+      border-color: var(--Red, #e67979);
+    }
+  }
+
+  &.primary {
+    color: white;
+    border: 0.5px solid var(--Stroke-opacity, rgba(0, 49, 96, 0.08));
+    background: var(--Active-action, #1e95fe);
+    &.hoverable:hover {
+      background: var(--Hover, #f1f5f9);
+      color: var(--Active-action, #1e95fe);
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    border: 1px solid var(--Stroke-opacity, rgba(0, 49, 96, 0.08));
+    color: var(--Placeholder, #bcc4c8);
+    background: #fff;
+    &.hoverable:hover {
+      color: var(--Placeholder, #bcc4c8);
+      background: #fff;
+      border: 1px solid var(--Stroke-opacity, rgba(0, 49, 96, 0.08));
+    }
+  }
+  &.loading {
+    cursor: progress;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid #006fcf;
+      border-color: #006fcf transparent #006fcf transparent;
+      animation: loader 1.2s linear infinite;
+    }
+  }
+  &.danger.loading::after {
+    border-color: #fff transparent #fff transparent;
+  }
+
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  &.shadow {
+    box-shadow: 0px 0px 0px 0px rgba(229, 235, 240, 0.43), 0px 1px 2px 0px rgba(229, 235, 240, 0.42),
+      0px 4px 4px 0px rgba(229, 235, 240, 0.36), 0px 8px 5px 0px rgba(229, 235, 240, 0.21),
+      0px 14px 6px 0px rgba(229, 235, 240, 0.06), 0px 22px 6px 0px rgba(229, 235, 240, 0.01);
+  }
+}

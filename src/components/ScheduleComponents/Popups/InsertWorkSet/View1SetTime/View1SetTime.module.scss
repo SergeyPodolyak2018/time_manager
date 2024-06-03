@@ -1,0 +1,73 @@
+@import '../../../../../styles/font_style';
+.insertWorkSetView1 {
+
+  &__titleH4 {
+    @include textBold14;
+    margin: 0;
+  }
+
+  &__titleH5 {
+    @include textStandard12;
+    margin-right: 5px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  &__text {
+    margin: 0;
+    @include textStandard12;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+    padding: 15px 30px;
+  }
+
+  &__columnItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include textStandard12;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  &__selectTime {
+    padding: 0 !important;
+  }
+
+  &__timepickerContainer {
+    padding: 0 10px;
+    width: 162px;
+    height: 40px;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__checkboxContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include textStandard12;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & label {
+      margin-left: 5px;
+    }
+  }
+
+}

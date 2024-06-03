@@ -1,0 +1,36 @@
+@import '../../../styles/color';
+.loader {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  z-index: 10000;
+}
+.loader:after {
+  content: ' ';
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid $blue;
+  border-color: $blue transparent $blue transparent;
+  animation: loader 1.2s linear infinite;
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

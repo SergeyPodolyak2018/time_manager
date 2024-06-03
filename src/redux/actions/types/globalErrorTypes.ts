@@ -1,0 +1,6 @@
+enum EGlobalErrorTypes {
+  ADD_GLOBAL_ERROR = 'ERROR_STATE/ADD_GLOBAL_ERROR',
+  REMOVE_GLOBAL_ERROR = 'ERROR_STATE/REMOVE_GLOBAL_ERROR',
+}
+
+export default EGlobalErrorTypes;

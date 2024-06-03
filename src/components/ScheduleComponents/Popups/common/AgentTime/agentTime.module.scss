@@ -1,0 +1,27 @@
+@import '../../../../../styles/font_style';
+
+.agentTime {
+  display: flex;
+  height: 14px;
+  @include textStandard12;
+  margin-right: 5px;
+  color: #5d6472;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 5px;
+
+  & span {
+    white-space: nowrap;
+  }
+
+  &__content {
+    width: calc(100% - 30px);
+    row-gap: 9px;
+    display: flex;
+    flex-direction: column;
+    @include textStandard12;
+    margin-left: 5px;
+    color: #788A9C;
+  }
+}

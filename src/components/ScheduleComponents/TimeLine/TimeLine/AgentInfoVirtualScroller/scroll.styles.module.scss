@@ -1,0 +1,8 @@
+.agentInfoScroller {
+  border-right: 1px solid;
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

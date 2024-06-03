@@ -1,0 +1,158 @@
+@import './color';
+@import './font_style';
+// table wrapper mixin
+// use this mixin for wrapper of table, as we need round edges, and add overflow
+/*
+markup example:
+<div className={styles.tableWrapper}>
+  <table>
+    <thead>
+      <tr>
+      <th>text</th>
+      <th>text</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>text</td>
+        <td>text</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+spans can be included in td, provide className "selected" to tr to highlight it.
+!WARNING! selection highlight is working only with spans, not with td itself
+for checkboxes put .check class on td, to center them
+*/
+@mixin tableWrapper($height: auto) {
+  border-radius: 4px;
+  height: $height;
+  border: 1px solid var(--Stroke-opacity, rgba(0, 49, 96, 0.08));
+  background: #fff;
+  overflow: auto;
+  table {
+    background: #fff;
+    width: 100%;
+    table-layout: fixed;
+
+    th,
+    td {
+      text-align: left;
+      @include textStandard14;
+      color: var(--Secondary-text-color, #5d6472);
+
+      border: 1px solid var(--Stroke-opacity, #00316014);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      span {
+        @include textStandard14;
+        color: var(--Secondary-text-color, #5d6472);
+
+        display: block;
+        min-height: 17px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+    }
+
+    thead {
+      top: 0;
+      position: sticky;
+
+      background: $list-header;
+      tr th {
+        padding: 5px 10px;
+        border: none;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 1px;
+          background: rgb(142, 195, 244);
+          transform: translateX(50%);
+        }
+      }
+
+      tr th:last-child {
+        &::after {
+          content: none;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 10px;
+
+          padding-right: 0px;
+          &:first-child {
+            padding-right: 0px;
+          }
+          &:last-child {
+            padding-left: 0px;
+            padding-right: 10px;
+          }
+        }
+        &:first-child {
+          td {
+            border-top: none;
+          }
+        }
+        &:hover {
+          background: $list-item-hover;
+        }
+
+        td:first-child {
+          border-left: none;
+        }
+        td:last-child {
+          border-right: none;
+        }
+        &.selected {
+          td {
+            padding: 5px 0px;
+            span {
+              padding: 5px 0px 5px 10px;
+
+              background: $list-item-selected;
+              height: 100%;
+              display: block;
+            }
+          }
+          td:first-child {
+            padding: 5px 0px 5px 5px;
+            span {
+              border-radius: 5px 0px 0px 5px;
+              padding-left: 5px;
+            }
+          }
+          td:last-child {
+            padding-right: 5px;
+            span {
+              border-radius: 0px 5px 5px 0px;
+            }
+          }
+        }
+        td.check {
+          padding-left: 0px;
+          span {
+            padding-left: 0px;
+            display: flex;
+            justify-content: center;
+          }
+          text-align: center;
+        }
+      }
+    }
+  }
+}

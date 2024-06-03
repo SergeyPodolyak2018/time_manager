@@ -1,0 +1,128 @@
+@import '../../../styles/color';
+@import '../../../styles/shadow';
+@import '../../../styles/font_style';
+
+
+.container {
+  &__fixed {
+    position: fixed;
+    z-index: 100001;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(200, 208, 223, 0.4);
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.content {
+  background-color: #fff;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+
+  &__btns {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}
+
+
+.infoBlock {
+  margin-top: 8px;
+  font-weight: 500;
+
+  .label {
+    color: #5D6472;
+    margin-right: 5px;
+  }
+
+  .value {
+    color: #788A9C;
+  }
+
+  &_inline {
+    margin-top: 8px;
+    display: flex;
+    height: 14px;
+    align-items: center;
+
+    .statusIcon {
+      display: flex;
+      width: 14px;
+      height: 14px;
+    }
+
+    .notification {
+      margin: 4px 5px 0;
+      font-weight: 600;
+      font-size: 10px;
+    }
+  }
+
+  &_error {
+    padding-left: 14px;
+    height: fit-content;
+    overflow: hidden;
+    align-items: baseline;
+    margin-top: 4px;
+    display: flex;
+
+    .notification {
+      max-height: 28px;
+      margin: 0 5px;
+      font-weight: 600;
+      font-size: 10px;
+    }
+  }
+}
+
+.progressBlock {
+  box-sizing: border-box;
+  margin-top: 5px;
+  max-width: 500px;
+  height: 25px;
+  background-color: #fff;
+  border: 1px solid #1e95fe;
+  border-radius: 2px;
+  padding: 3px;
+  display: flex;
+  text-align: center;
+  flex: 1;
+  position: relative;
+
+  .progressValue {
+    width: 100px;
+    background: linear-gradient(90deg, #74BEFF 8.5%, #44A7FE 50.32%, #1E95FE 103.74%);
+    height: 20px;
+    transition: width 500ms linear;
+    animation: fadeIn 0.5s;
+
+    &__text {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      @include textStandard14
+    }
+  }
+}
+
+/* Animation for appearance progress bar   */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+

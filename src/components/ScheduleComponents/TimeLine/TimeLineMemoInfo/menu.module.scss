@@ -1,0 +1,57 @@
+@import '../../../../styles/color';
+@import '../../../../styles/font_style';
+@import '../../../../styles/shadow';
+
+.memoWrapper {
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 200px;
+  background: #FFFFFF;
+  color: black;
+  padding: 8px 10px 8px 10px;
+  border-radius: 4px;
+  font-size: 90%;
+  z-index: 9999;
+  @include textStandard12;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  border-radius: 4px;
+  //top: 0;
+  //left: 0;
+  //box-sizing: border-box;
+  //display: flex;
+  //align-items: center;
+  //color: #5D6472;
+  //background-color: #fff;
+  //font-size: 12px;
+  //line-height: 12px;
+  //font-weight: 400;
+  //padding-left: 8px;
+  //transform: translateY(-32px) translateX(-11px);
+  //border: 1px solid #eb5757;
+  //border-radius: 4px;
+  //&:before {
+  //  content: "";
+  //  width: 6px;
+  //  height: 6px;
+  //  position: absolute;
+  //  background-color: #fff;
+  //  transform: rotate(225deg);
+  //  border-left: 1px solid #eb5757;
+  //  border-top: 1px solid #eb5757;
+  //  border-radius: 1px;
+  //  bottom: -4px;
+  //  left: 40px;
+  //}
+  span {
+    font-weight: 400;
+    line-break: anywhere;
+  }
+}
+
+

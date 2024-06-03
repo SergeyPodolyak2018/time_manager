@@ -1,0 +1,67 @@
+@import '../../../styles/color';
+
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -60px;
+  font-family: Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.66666667;
+}
+
+.spinnerContainer {
+  position: relative;
+  left: 50%;
+  top: -50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  margin: auto;
+}
+
+
+.fast-spinner {
+
+}
+
+.shapeshifter {
+  animation-duration: 1080ms, 2160ms;
+  animation-timing-function: steps(65), steps(1, start);
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-image: url("./assets/sprite_60fps.svg");
+
+  &__play {
+    animation-name: play65, rotate65;
+    animation-iteration-count: infinite, infinite;
+  }
+}
+
+@keyframes play65 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -3900px 0px;
+  }
+}
+
+@keyframes rotate65 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+

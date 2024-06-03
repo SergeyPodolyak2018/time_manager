@@ -1,0 +1,131 @@
+@import '../../../../../../../styles/color';
+@import '../../../../../../../styles/font_style';
+@import '../../../../../../../styles/shadow';
+
+.popUpContainer {
+  position: fixed;
+  z-index: 2000;
+  width: 168px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $white;
+  transform: translateX(-100%);
+  cursor: pointer;
+}
+
+.container {
+  position:fixed;
+  z-index: 999;
+  width: 168px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $white;
+  transform: translateX(-100%);
+  cursor: pointer;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: calc(100% - 10px);
+  height: 27px;
+  margin-top: 5px;
+  border-radius: 5px;
+  position: relative;
+  @include standart;
+  color: #5d6472;
+  &:last-child {
+    margin-bottom: 3px;
+    &:after {
+      content: none;
+    }
+  }
+
+  span {
+    margin-left: 10px;
+  }
+  &:after {
+    width: calc(100% + 10px);
+    height: 1px;
+    background-color: rgba(188, 196, 200, 0.25);
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: -5px;
+  }
+}
+
+.regular {
+  &:hover {
+    background: #e4f8ff;
+    color: #0287fe;
+    svg path {
+      stroke: #0287fe;
+    }
+  }
+}
+.delete {
+  &:hover {
+    background: #fcedee;
+    color: #e45766;
+    svg path {
+      stroke: #e45766;
+    }
+  }
+
+}
+.popup{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: calc(100%);
+  min-width: 60px;
+  height: 27px;
+  margin-top: 5px;
+  border-radius: 5px;
+  position: relative;
+  @include standart;
+  color: #5d6472;
+  &:last-child {
+    margin-bottom: 3px;
+    &:after {
+      content: none;
+    }
+  }
+
+  span {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  &:after {
+    width: calc(100%);
+    height: 1px;
+    background-color: rgba(188, 196, 200, 0.25);
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: -5px;
+  }
+  cursor: pointer;
+}
+
+.triggerDiv{
+  background:white;
+  border: 0;
+  height: 27px;
+  width: calc(100%);
+  z-index: 999;
+}
+
+
+
+
+

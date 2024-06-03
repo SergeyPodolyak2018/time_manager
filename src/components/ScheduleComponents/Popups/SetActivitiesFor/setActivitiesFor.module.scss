@@ -1,0 +1,20 @@
+@import '../../../../styles/font_style';
+
+.setActivitiesFor {
+
+  &__popup {
+    position: fixed;
+    top: 50%;
+    width: 560px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px;
+    min-height: 560px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 54px 425px 83px;
+    gap: 10px;
+  }
+}

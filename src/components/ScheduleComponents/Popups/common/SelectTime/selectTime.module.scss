@@ -1,0 +1,57 @@
+@import '../../../../../styles/font_style';
+.selectTime {
+  padding: 10px 20px;
+
+  &__columnItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include textStandard12;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__timepickerContainer {
+    padding: 0 10px;
+    width: 162px;
+    height: 40px;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__timepickerContainerBigger {
+    padding: 0 10px;
+    width: 213px;
+    height: 40px;
+    border: 1px solid rgba(188, 196, 200, 0.25);
+    border-radius: 4px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__checkboxContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include textStandard12;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & label {
+      margin-left: 5px;
+    }
+  }
+
+}

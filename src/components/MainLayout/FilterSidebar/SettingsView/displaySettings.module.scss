@@ -1,0 +1,132 @@
+@import '../../../../styles/color';
+@import '../../../../styles/fonts';
+
+.settingDisplay {
+  position: absolute;
+  top: 44px;
+  width: 100%;
+  background-color: $white;
+  z-index: 999;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  box-shadow: 0 17px 7px rgba(73, 112, 151, 0.01), 0 9px 6px rgba(73, 112, 151, 0.02),
+    0 4px 4px rgba(73, 112, 151, 0.04), 0 1px 2px rgba(73, 112, 151, 0.04), 0 0 0 rgba(73, 112, 151, 0.04);
+  border-radius: 5px;
+
+  &__itemWrapper {
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover {
+      .settingDisplay__item {
+        background: $list-item-hover;
+        border-radius: 5px;
+      }
+    }
+
+    &:nth-child(3) {
+      border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+    }
+
+    &:nth-child(5) {
+      border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+    }
+  }
+
+  &__item {
+    font-family: $helvetica;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5d6472;
+    padding: 5px 10px 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 5px;
+      background-repeat: no-repeat;
+    }
+
+    &--text {
+      overflow: hidden;
+      padding-right: 10px;
+    }
+
+    &--iconReset {
+      color: #eb5757;
+      &:before {
+        background-image: url('assets/trash.svg');
+      }
+    }
+
+    &--iconFullName {
+      &:before {
+        background-image: url('assets/fullname.svg');
+      }
+    }
+
+    &--iconFullNameAndId {
+      &:before {
+        background-image: url('assets/fullnameAndId.svg');
+      }
+    }
+
+    &--id {
+      &:before {
+        background-image: url('assets/id.svg');
+      }
+    }
+
+    &--iconFullNameActive {
+      &:before {
+        filter: $imgBlue;
+      }
+    }
+
+    &--iconFullNameAndIdActive {
+      &:before {
+        filter: $imgBlue;
+      }
+    }
+
+    &--idActive {
+      &:before {
+        background-image: url('assets/id.svg');
+        filter: $imgBlue;
+      }
+    }
+
+    &--iconCounter {
+      &:before {
+        background-image: url('assets/counter.svg');
+      }
+    }
+
+    &--iconCounterActive {
+      &:before {
+        filter: $imgBlue;
+      }
+    }
+
+    &--iconEmpty {
+      &:before {
+        background-image: url('assets/empty.svg');
+      }
+    }
+
+    &--iconEmptyActive {
+      &:before {
+        filter: $imgBlue;
+      }
+    }
+  }
+}

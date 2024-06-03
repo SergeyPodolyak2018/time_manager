@@ -1,0 +1,141 @@
+@import '../../styles/color';
+@import '../../styles/main';
+
+.loginContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  flex-direction: column;
+
+  .wrapper {
+    width: 602px;
+    height: 706.45px;
+
+    background: #ffffff;
+    box-shadow: 0px 2px 2px rgba(223, 223, 224, 0.7);
+    border-radius: 6.27083px;
+    @include center;
+
+    .header {
+      @include center;
+      width: 221px;
+      height: 100.54px;
+      font-family: Helvetica Neue;
+      font-style: normal;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
+    .row1 {
+      font-weight: 700;
+      font-size: 50.1667px;
+      line-height: 61px;
+
+      color: $black;
+    }
+    .row2 {
+      font-weight: 400;
+      font-size: 22.575px;
+      line-height: 27px;
+      color: $grey;
+    }
+  }
+  .logoWrapper {
+    position: absolute;
+    width: 218.14px;
+    height: 50px;
+    left: 30px;
+    top: 30px;
+    background-image: url('../../static/logo.svg');
+  }
+}
+
+.form_wrapper {
+  width: 500px;
+}
+.container {
+  width: 100%;
+}
+.input_wrapper {
+  width: 100%;
+  height: 105px;
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-end;
+}
+.input_wrapper svg {
+  position: absolute;
+  right: 23px;
+  bottom: 23px;
+}
+.input {
+  width: 100%;
+  height: 71px;
+  background: $white;
+  border: 1px solid #eef0f6;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17.5583px;
+  line-height: 21px;
+  color: $black;
+  padding-left: 25px;
+}
+.placeholder {
+  width: 46px;
+  height: 21px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17.5583px;
+  line-height: 21px;
+  color: $grey;
+  position: absolute;
+  top: 0px;
+  transform: translateY(-50%);
+  left: 0px;
+  pointer-events: none;
+}
+
+.buttonsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 277.75px;
+  height: 145.33px;
+}
+
+.buttonWrapper {
+  width: 100%;
+  height: 61px;
+  &Small {
+    width: 138.25px;
+    height: 46.08px;
+  }
+}
+.ImportContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 156px;
+}
+.buttonWrapperImport {
+  width: 92px;
+  display: flex;
+}
+.buttonWrapperReset {
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+}

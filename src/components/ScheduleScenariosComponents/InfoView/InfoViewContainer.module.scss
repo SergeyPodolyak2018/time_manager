@@ -1,0 +1,223 @@
+@import '../../../styles/color';
+@import '../../../styles/components.mixins';
+
+.container {
+  min-width: 1170px;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+  //styleName: H7 14 px;
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  .tabs {
+    display: flex;
+    .tab {
+      user-select: none;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 8px 24px;
+      color: rgba(188, 196, 200, 1);
+      border: 1px solid rgba(224, 231, 242, 1);
+      border-radius: 0px 4px 0px 0px;
+      border-left-color: white;
+      &.active {
+        background-color: rgb(249, 252, 255);
+        color: rgba(93, 100, 114, 1);
+        border-bottom-color: white;
+
+        border-radius: 0px 4px 0px 0px;
+      }
+    }
+    .line {
+      margin-top: auto;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(224, 231, 242, 1);
+    }
+  }
+}
+
+.content {
+  height: 100%;
+  height: 415px;
+  color: rgba(93, 100, 114, 1);
+  .dataTab {
+    padding: 24px;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 4fr 3fr;
+    column-gap: 24px;
+    row-gap: 16px;
+    background-color: rgb(249, 252, 255);
+
+    .scenarioPropertiesLabel {
+      grid-column: 1;
+      font-weight: 600;
+    }
+    .commentsLabel {
+      grid-column: 2;
+      grid-row: 1;
+      font-weight: 600;
+    }
+    section {
+      grid-column: 1;
+      display: grid;
+      grid-template-columns: 101px 1fr;
+      gap: 24px;
+      align-items: center;
+      &.dateSection {
+        grid-template-columns: 101px 232px auto 91px 1fr;
+        .joinedEditLikeSpan {
+          // width: 232px;
+          display: flex;
+          gap: 8px;
+          padding: 8px 14px;
+          border: 1px solid #00316014;
+          border-radius: 4px;
+          span {
+            color: #bcc4c8;
+            cursor: not-allowed;
+          }
+        }
+      }
+      &.ownerSection {
+        grid-template-columns: 101px 200px 1fr;
+        .sharedGroup {
+          display: flex;
+          gap: 8px;
+        }
+      }
+      &.createdSection {
+        grid-template-columns: 101px 131px auto 131px 1fr;
+      }
+      &.forecast {
+        grid-template-columns: 101px 1fr auto;
+        .dotsButton {
+          box-shadow: 0px 0px 0px 0px rgba(229, 235, 240, 0.43);
+          width: 38px;
+          height: 38px;
+          border: 0.5px solid rgba(188, 196, 200, 0.25);
+          border-radius: 4px;
+          background: white;
+          display: grid;
+          svg {
+            place-self: center;
+          }
+        }
+      }
+      &.comments {
+        grid-column: 2;
+        grid-row: 2 / span 5;
+        display: block;
+        textarea {
+          margin: 0;
+          padding: 8px;
+          width: 100%;
+          height: 100%;
+          resize: none;
+          border: 1px solid rgba(188, 196, 200, 0.25);
+          border-radius: 4px;
+          &::placeholder{
+            color: var(--Placeholder, #BCC4C8);
+            font-style: normal;
+          }
+
+          &:active,
+          &:focus {
+            outline: 1px solid rgba(188, 196, 200, 0.25);
+          }
+        }
+      }
+      &.buttonsSection {
+        grid-column: 2;
+        display: flex;
+        justify-content: flex-end;
+        button {
+          font-size: 14px;
+          padding: 12px 32px;
+          width: min-content;
+        }
+      }
+    }
+    &.disabled {
+      color: rgba(188, 196, 200, 1);
+    }
+  }
+  .statusesTab {
+    table {
+      table-layout: fixed;
+      width: 100%;
+      // height: 100%;
+      min-width: 900px;
+      // table-layout: fixed;
+      position: relative;
+      thead {
+        background: rgb(249, 252, 255);
+      }
+      th,
+      td {
+        text-align: left;
+        border: 1px solid rgba(224, 231, 242, 1);
+
+        font-family: Helvetica Neue, sans-serif;
+        font-style: normal;
+        color: rgba(93, 100, 114, 1);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      th {
+        padding: 8px 24px;
+      }
+      tbody {
+        tr {
+          cursor: pointer;
+
+          &:hover {
+            background: $list-item-hover;
+          }
+
+          td {
+            padding: 8px 24px;
+
+            svg {
+              margin-left: auto;
+              margin-right: auto;
+              display: block;
+            }
+          }
+          &.active {
+            background: rgb(237, 246, 255);
+          }
+        }
+      }
+    }
+  }
+}
+.forecastScenarioTitle {
+  color: var(--Secondary-text-color, #5d6472);
+
+  /* H9 14 px medium */
+  font-style: normal;
+  line-height: 21px; /* 150% */
+  text-align: left;
+  font-weight: 600;
+}
+.forecastScenarioTableWrapper {
+  @include tableWrapper(430px);
+  .sharedCell{
+    text-align: center;
+  }
+}

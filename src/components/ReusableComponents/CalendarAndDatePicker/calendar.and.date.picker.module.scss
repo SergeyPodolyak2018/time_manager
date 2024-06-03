@@ -1,0 +1,75 @@
+$text-color-dark: #5d6472;
+$text-color-light: #ffffff;
+$bg-color-regular: #99c5fc;
+$bg-color-select: #1e95fe;
+$bg-color-hover: #7ea6f0;
+
+@mixin today-point {
+  position: absolute;
+  content: ' ';
+  width: 5px;
+  height: 5px;
+  bottom: 2.5px;
+  left: calc(50% - 2.5px);
+  border-radius: 50%;
+}
+
+.custom_container {
+  &.rmdp-border {
+    border: none;
+  }
+}
+
+.day_selected {
+  color: $text-color-light !important;
+  background-color: $bg-color-select !important;
+}
+
+.current_regular {
+  color: $text-color-light !important;
+  background-color: $bg-color-regular !important;
+}
+
+.today_selected {
+  background-color: $bg-color-select !important;
+  &:after {
+    background-color: $text-color-light;
+    @include today-point;
+  }
+}
+
+.today_regular {
+  color: $text-color-dark !important;
+  background: none !important;
+  &:after {
+    background: $bg-color-select;
+    @include today-point;
+  }
+}
+
+.today_current {
+  color: $text-color-light !important;
+  background-color: $bg-color-regular !important;
+  &:after {
+    background: $text-color-light;
+    @include today-point;
+  }
+}
+
+.today_regular, .today_current {
+  &:hover {
+    color: $text-color-light !important;
+    background-color: $bg-color-hover !important;
+    &:after {
+      background: $text-color-light;
+      @include today-point;
+    }
+  }
+}
+
+.current_regular {
+  &:hover {
+    color: $text-color-light !important;
+    background-color: $bg-color-hover !important;
+  }
+}

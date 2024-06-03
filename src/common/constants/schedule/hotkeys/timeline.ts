@@ -1,0 +1,32 @@
+import { Key } from 'ts-key-enum';
+
+export const TimelineHotKeys = {
+  ESCAPE: `${Key.Escape}`,
+  UNDO_HISTORY: [`${Key.Control}+z`, `${Key.Meta}+z`],
+  REDO_HISTORY: [
+    `${Key.Control}+${Key.Shift}+z`,
+    `${Key.Meta}+${Key.Shift}+z`,
+    `${Key.Alt}+${Key.Shift}+${Key.Backspace}`,
+    `${Key.Control}+y`,
+    `${Key.Meta}+y`,
+  ],
+  MOVE_RIGHT: `${Key.Control}+${Key.ArrowRight}`,
+  MOVE_LEFT: `${Key.Control}+${Key.ArrowLeft}`,
+  MOVE_RIGHT_MAC: `${Key.Meta}+${Key.ArrowRight}`,
+  MOVE_LEFT_MAC: `${Key.Meta}+${Key.ArrowLeft}`,
+  NEXT_SHIFT: `shift+${Key.ArrowRight}`,
+  PREVIOUS_SHIFT: `shift+${Key.ArrowLeft}`,
+  NEXT_SHIFT_ITEM: `${Key.ArrowRight}`,
+  PREVIOUS_SHIFT_ITEM: `${Key.ArrowLeft}`,
+  MEMO_INFO: ' ',
+  OPEN_HISTORY_MODAL: `ctrl+h`,
+  OPEN_DELETE_MODAL: `${Key.Control}+x`,
+  OPEN_EDIT_SHIFT_MODAL: `${Key.Enter}`,
+  CLOSE_ALL_MENU: `${Key.Escape}`,
+  COPY_ACTIVITIES: [`${Key.Control}+c`, `${Key.Meta}+c`],
+  PASTE_ACTIVITIES: [`${Key.Control}+v`, `${Key.Meta}+v`],
+  // PASTE_ACTIVITIES_SPECIAL_0: [`${Key.Alt}+${Key.Control}+v`, `${Key.Alt}+${Key.Meta}+v`],
+  // PASTE_ACTIVITIES_SPECIAL_1: [`${Key.Shift}+${Key.Control}+v`, `${Key.Shift}+${Key.Meta}+v`],
+  MULTI_SELECT: `${Key.Shift}`,
+  MODAL_AGREE: `${Key.Enter}`,
+};

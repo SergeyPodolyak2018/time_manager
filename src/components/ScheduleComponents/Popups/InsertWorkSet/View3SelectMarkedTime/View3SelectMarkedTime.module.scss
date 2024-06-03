@@ -1,0 +1,10 @@
+@import '../../../../../styles/font_style';
+@import '../../../../../styles/components.mixins';
+
+.insertWorkSetView3 {
+  padding: 10px 20px;
+height: 100%;
+  &__content {
+    @include tableWrapper(235px);
+  }
+}

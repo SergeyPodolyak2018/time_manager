@@ -1,0 +1,182 @@
+@import '../../../../../styles/color';
+
+.tagsinputInput {
+  background: transparent;
+  border: 0;
+  line-height: 18px;
+  outline: none;
+  width: 100%;
+  color: #a1a2a2;
+  font-family: 'Helvetica Neue', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 3px;
+}
+
+.renderLayout {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  max-height: 18px;
+  margin-left: 3px;
+  &.withTagButton {
+    margin-left: -20px;
+  }
+}
+
+.tagsinputTag {
+  margin-bottom: 5px;
+  margin-right: 4px;
+  min-width: 84px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 3px;
+  gap: 5px;
+  height: 25px;
+  background: rgba(188, 196, 200, 0.25);
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5d6472;
+  justify-content: center;
+}
+
+.tagsinput {
+  background-color: $white;
+  outline: none;
+  font-family: 'Helvetica Neue', serif;
+  color: #a1a2a2;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 14px 84px 8px 26px;
+  position: relative;
+  border: none;
+  box-shadow: 0px 22px 6px rgba(229, 235, 240, 0.01), 0px 14px 6px rgba(229, 235, 240, 0.06),
+    0px 8px 5px rgba(229, 235, 240, 0.21), 0px 4px 4px rgba(229, 235, 240, 0.36), 0px 1px 2px rgba(229, 235, 240, 0.42),
+    0px 0px 0px rgba(229, 235, 240, 0.43);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.tagsinputDropdown {
+  overflow-y: scroll;
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  box-shadow: 0px 17px 7px rgba(73, 112, 151, 0.01), 0px 9px 6px rgba(73, 112, 151, 0.02),
+    0px 4px 4px rgba(73, 112, 151, 0.04), 0px 1px 2px rgba(73, 112, 151, 0.04), 0px 0px 0px rgba(73, 112, 151, 0.04);
+  border-radius: 4px;
+  padding: 7px 23px 7px 15px;
+  z-index: 9999;
+  top: 50px;
+  left: 0;
+  width: 88%;
+  max-height: 126px;
+  outline: none;
+  font-family: 'Helvetica Neue', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.tagsinputBtn {
+  background: #1e95fe;
+  border: 0;
+  border-radius: 5px;
+  padding: 13px 4px;
+  color: #fff;
+  // margin: auto auto;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  min-width: 26px;
+  height: 25px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  left: 4px;
+  z-index: 99999;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-size: 13px;
+  line-height: 17px;
+  //color: #FFFFFF;
+
+  &:after {
+    content: '';
+    background-image: url('../../assets/arrowDown.svg');
+    width: 7px;
+    height: 8px;
+    z-index: 9999;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 3px;
+  }
+}
+
+.tagsinputBtn2 {
+  background: #1e95fe;
+  border: 0;
+  border-radius: 5px;
+  padding: 13px 4px;
+  color: #fff;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  min-width: 26px;
+  height: 25px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  left: 4px;
+  z-index: 99999;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-size: 13px;
+  line-height: 17px;
+  //color: #FFFFFF;
+
+  &:after {
+    content: '';
+    transform: rotate(-180deg);
+    background-image: url('../../assets/arrowDown.svg');
+    width: 7px;
+    height: 8px;
+    z-index: 9999;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 3px;
+  }
+}
+
+.tagsinputFocused {
+  border: none;
+}
+
+.tagsinputRemove {
+  cursor: pointer;
+  font-size: initial;
+}
+
+.tagsinputTag a::before {
+  content: '×';
+}

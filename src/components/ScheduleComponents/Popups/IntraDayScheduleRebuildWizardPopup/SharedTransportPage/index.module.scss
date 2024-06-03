@@ -1,0 +1,104 @@
+@import '../../../../../styles/color';
+@import '../../../../../styles/shadow';
+@import '../../../../../styles/font_style';
+
+.pageWrapper {
+  height: 100%;
+}
+
+.tableSubWrapper {
+  width: auto;
+  max-height: 670px;
+  position: relative;
+  border: 1px solid rgba(188, 196, 200, 0.25);
+  border-radius: 5px;
+  margin: 0 30px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  table {
+    user-select: none;
+    width: 100%;
+    @include standart;
+    thead {
+      color: #5d6472;
+      width: 500px;
+      height: 27px;
+      line-height: 21px;
+      background: $list-header;
+      border-radius: 5px 5px 0 0;
+      tr {
+        height: 36px;
+        color: #333333;
+        border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+        background-color: #f7f8f9;
+        td {
+          box-sizing: border-box;
+          border-right: 1px solid rgba(188, 196, 200, 0.25);
+          width: 112px;
+          height: 36px;
+          color: #5d6472;
+          > * {
+            margin: 10px;
+            &.alignCentre {
+              display: flex;
+              justify-content: center;
+            }
+          }
+          &:first-child {
+            width: 50%;
+            max-width: 50%;
+          }
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        height: 36px;
+        border-bottom: 1px solid rgba(188, 196, 200, 0.25);
+        background-color: #fff;
+
+        &:hover {
+          background: $list-item-hover;
+        }
+
+        td {
+          color: #5d6472;
+          box-sizing: border-box;
+          border-right: 1px solid rgba(188, 196, 200, 0.25);
+          width: 112px;
+          height: 36px;
+
+          > * {
+            box-sizing: border-box;
+            display: block;
+            margin: 0 10px;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 28px;
+            &.alignCentre {
+              display: flex;
+              justify-content: center;
+            }
+          }
+          &:first-child {
+            width: 50%;
+            max-width: 50%;
+          }
+          &:last-child {
+            border-right: none;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
